@@ -1,7 +1,11 @@
-def saldo_fun(temp_saldo, comment,):
+def saldo_fun(
+    temp_saldo,
+    comment,
+):
     saldo += temp_saldo
     logs.append(("saldo", temp_saldo, comment))
     return saldo
+
 
 def buy_fun(
     product_id,
@@ -43,6 +47,7 @@ def buy_fun(
     else:
         storehouse[product_id] = product_amount
     saldo -= unit_price * product_amount
+
 
 def sale_fun(
     product_id,
