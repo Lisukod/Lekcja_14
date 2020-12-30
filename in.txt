@@ -1,0 +1,26 @@
+saldo
+1000000
+wp³ata pocz¹tkowa
+saldo
+-140000
+zus
+zakup
+raspberry
+15000
+5
+sprzeda¿
+raspberry
+25000
+2
+zakup 
+jetson
+40000 
+5
+sprzeda¿
+jetson
+50000
+4
+saldo
+-5000
+korona
+stop
