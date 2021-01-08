@@ -75,9 +75,6 @@ def update_buy():
         )
         session["messages"] = messages
         return redirect(url_for("form_error", messages=messages))
-    # accountant.manager.buy_fun(
-    #     product_id, unit_price, product_amount, "out.txt"
-    # )
     if db_product is None:
         db.session.add(
             Produkty(
@@ -136,9 +133,6 @@ def update_sale():
         )
         session["messages"] = messages
         return redirect(url_for("form_error", messages=messages))
-    # accountant.manager.sale_fun(
-    #     product_id, unit_price, product_amount, "out.txt"
-    # )
     db_product.stan_mag -= product_amount
     db_saldo.wartosc_salda += product_amount * unit_price
     db.session.add(db_product)
@@ -158,7 +152,6 @@ def update_sale():
 @app.route("/saldo", methods=["POST"])
 def update_saldo():
     comment = request.form["comment"]
-    # accountant.manager.saldo_fun( saldo_val, comment )
     db_saldo = db.session.query(Saldo).first()
     db_saldo.wartosc_salda += int(request.form["saldo_value"])
     db.session.add(db_saldo)
