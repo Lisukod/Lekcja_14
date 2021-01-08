@@ -6,7 +6,7 @@ from flask_alembic import Alembic
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
-app.config['SESSION_TYPE'] = 'filesystem'
+app.config["SESSION_TYPE"] = "filesystem"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///test.db"
 
 db = SQLAlchemy(app)
