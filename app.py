@@ -49,10 +49,12 @@ def get():
 
 @app.route("/")
 def set_form():
-    db.session.commit()
+    if db.session.query(Saldo).first() is None:
+        db.session.add(Saldo(wartosc_salda=0))
+        db.session.commit() 
     return render_template(
         "index.html",
-        saldo_value=db.session.query(Saldo).all()[0].wartosc_salda,
+        saldo_value=db.session.query(Saldo).first().wartosc_salda,
         storehouse=db.session.query(Produkty).all(),
     )
 
