@@ -13,7 +13,7 @@
     <h1>Saldo:</h1><h2> {{saldo_value}}</h2> 
     <h1>Stan magazynowy:</h1>
     {% for item in storehouse %}
-      <h2>{{ item }}: {{ storehouse[item] }}</h2>
+      <h2>{{ item["nazwa"] }}: {{ item["stan_mag"] }}</h2>
     {% endfor %}
   </div>
   <div class="flat-form">
